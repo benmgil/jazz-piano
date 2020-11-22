@@ -4,6 +4,7 @@
 466893
 
 
+
 Rubric turned in on time **(5 points)**
 
 Languages/Frameworks Used **(20 points)**
@@ -26,4 +27,5 @@ Best Practices **(5 points)**
 
 Creative Portion **(10 points)**
 
-Checked out by Clay on 11/22/2020
+
+*Checked out by Clay on 11/22/2020*
