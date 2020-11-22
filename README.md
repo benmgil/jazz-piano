@@ -2,3 +2,28 @@
 466889
 
 466893
+
+
+Rubric turned in on time **(5 points)**
+
+Languages/Frameworks Used **(20 points)**
+-	p5.js **(10 points)**
+-	audiosynth.js **(10 points)**
+
+Functionality
+-	A piano keyboard is displayed on the screen **(12 points)**
+-	Users can click piano keys and the correct note is played **(12 points)**
+-	Users can select jazz scales and the correct notes are highlighted **(8 points)**
+-	Users can register, login, and logout **(8 points)**
+-	There is a list of the user’s most recently selected scales **(8 points)**
+-	Users can save a list of their favorite scales **(8 points)**
+-	Site is intuitive and easy to use **(3 points)**
+-	Site is visually appealing **(1 points)**
+
+Best Practices **(5 points)**
+-	Code is readable and well formatted **(3 points)**
+-	All pages pass the html validator **(2 points)**
+
+Creative Portion **(10 points)**
+
+Checked out by Clay on 11/22/2020
