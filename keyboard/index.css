@@ -1,3 +1,16 @@
 #list-button{
     display: hidden;
 }
+
+.key{
+    stroke-width: 1;
+    stroke: black;
+}
+
+.black{
+    fill: black;
+}
+
+.white{
+    fill: white;
+}
