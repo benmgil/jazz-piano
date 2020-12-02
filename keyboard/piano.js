@@ -1,3 +1,10 @@
+class Note{
+    constructor(note, octave, duration){
+        this.note = note;
+        this.octave = octave;
+        this.duration = duration;
+    }
+}
 const notes = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
 const modes = {
     "major": [2,2,1,2,2,2,1],
@@ -16,26 +23,29 @@ const modes = {
     "locrian-#2": [2,1,2,1,2,2,2],
     "super-locrian": [1,2,1,2,2,2,2],
 
-    "harmonic-minor": [2,1,2,2,1,2,1],
-    "locrian-#6": [1,2,2,1,2,1,2],
-    "major-#5": [2,2,1,2,1,2,1],
-    "dorian-#4": [2,1,2,1,2,1,2],
-    "mixolydian-b2b6": [1,2,1,2,1,2,2],
-    "lydian-#2": [2,1,2,1,2,2,1],
-    "locrian-b4b7": [1,2,1,2,2,1,2]
+    "harmonic-minor": [2,1,2,2,1,3,1],
+    "locrian-#6": [1,2,2,1,3,1,2],
+    "major-#5": [2,2,1,3,1,2,1],
+    "dorian-#4": [2,1,3,1,2,1,2],
+    "mixolydian-b2b6": [1,3,1,2,1,2,2],
+    "lydian-#2": [3,1,2,1,2,2,1],
+    "locrian-b4b7": [1,2,1,2,2,1,3]
 }
 var piano = Synth.createInstrument('piano');
 
-function playNote(note,octave,duration){
-    piano.play(note,octave,duration);
+function playNote(note){
+    piano.play(note.note,note.octave,note.duration);
 }
 
-function playScale(note, octave, scale){
-    speed = 1;
+function playScale(note, octave, scale, speed){
+    speed = .75;
     let intervals = modes[scale];
     let noteIndex = notes.indexOf(note);
     let currentOctave = octave;
+    let notesToPlay = [];
 
+
+    notesToPlay.push(new Note(notes[noteIndex],currentOctave,speed));
     for(let i = 0; i < intervals.length; i++){
         console.log(noteIndex);
         interval = intervals[i];
@@ -44,9 +54,11 @@ function playScale(note, octave, scale){
             currentOctave++;
         }
         noteIndex = noteIndex % notes.length;
+        notesToPlay.push(new Note(notes[noteIndex],currentOctave,speed));
+    }
+    for(let i = 0; i < notesToPlay.length; i++){
         setTimeout(function(){
-            
-            playNote(notes[noteIndex],currentOctave,speed)
-        },i*1000);
+            playNote(notesToPlay[i])
+        },(i+1)*1000*speed);
     }
 }
