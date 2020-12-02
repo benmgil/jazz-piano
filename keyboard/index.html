@@ -14,6 +14,7 @@
         <button id="list-button"> &lt; </button>
     </div>
 
+
     <!-- Key DropDown -->
     <select id="select-key">
         <option value="C">C</option>
@@ -29,8 +30,41 @@
         <option value="A#">Bb</option>
         <option value="B">B / Cb</option>
     </select>
+   
+    <!-- Scale DropDown -->
+    <select id="select-scale">
+        <optgroup label="Major Modes">
+            <option value="major">Major</option>
+            <option value="dorian">Dorian</option>
+            <option value="phrygian">Phrygian</option>
+            <option value="lydian">Lydian</option>
+            <option value="mixolydian">Mixolydian</option>
+            <option value="aeolian">Aeolian</option>
+            <option value="locrian">Locrian</option>
+        </optgroup>
+        <optgroup label="Melodic-Minor Modes">
+            <option value="melodic-minor">Melodic Minor</option>
+            <option value="dorian-b2">Dorian b2</option>
+            <option value="lydian-augmented">Lydian Augmented</option>
+            <option value="lydian-dominant">Lydian Dominant</option>
+            <option value="mixolydian-b6">Mixolydian b6</option>
+            <option value="locrian-#2">Locrian #2</option>
+            <option value="super-locrian">Super Locrian</option>
+        </optgroup>
+        <optgroup label="Harmonic-Minor Modes">
+            <option value="harmonic-minor">Harmonic Minor</option>
+            <option value="locrian-#6">Locrian #6</option>
+            <option value="major-#5">Major #5</option>
+            <option value="dorian-#4">Dorian #4</option>
+            <option value="mixolydian-b2b6">Mixolydian b2b6</option>
+            <option value="lydian-#2">Lydian #2</option>
+            <option value="locrian-b4b7">Locrian b4b7</option>
+        </optgroup>
+    </select>
 
-
+    <button id="favorite-button"> &lt;3 </button>
+    <button id="show-button">Display</button>
+    <button id="play-button">Play</button>
 
     <!-- Keyboard -->
     <div id="keyboard">
@@ -61,5 +95,11 @@
             <polygon id="B-2" class="key white" points="200,0 210,0 210,100 195,100 195,50 200,50"/>
         </svg>
     </div>
+
+    <p>Starting at <select id="select-octave">
+                        <option value="C2">C2</option>
+                        <option value="C3">C3</option>
+                        <option value="C4">C4</option>
+                   </select></p>
 </body>
 </html>
