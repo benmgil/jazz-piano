@@ -8,7 +8,7 @@
 Rubric turned in on time **(5 points)**
 
 Languages/Frameworks Used **(20 points)**
--	p5.js **(10 points)**
+-	p5.js **(10 points)**  (While our original implementation required p5.js, we were able to accomplish what we needed using HTML svg tags. To replace this framework, we decided to utilize Node.js Express instead)
 -	audiosynth.js **(10 points)**
 
 Functionality
