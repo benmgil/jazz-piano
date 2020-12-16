@@ -1,0 +1,181 @@
+body{
+    text-align: center;
+    font-family: Arial;
+    background: #b8b8b8;
+    margin: 0;
+    background: #A1BED6;
+    background:  #505a67;
+    padding: 0px;
+    overflow-y: hidden;
+}
+
+button{
+  background: none;
+  border-radius: 5px;
+  box-shadow: none;
+  border: 1px solid white;
+  color: white;
+  padding: 5px;
+}
+button:hover{
+  cursor: pointer;
+  background:  #405157;
+}
+
+select{
+  background: none;
+  border-radius: 5px;
+  box-shadow: none;
+  border: 1px solid white;
+  color: white;
+  padding: 5px;
+  appearance: none;
+}
+select:hover{
+  cursor: pointer;
+  background:  #405157;
+}
+#octave{
+  /*background: white;*/
+  width: 13%;
+  margin: auto;
+  color: white;
+}
+
+#header {
+    text-align: right;
+}
+#main-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+#piano-screen{
+    width: 80%;
+    margin: auto;
+    margin-top: 0;
+    padding-top: 5px;
+
+}
+#logout{
+  display: none;
+}
+#menu-screen{
+    display: none;
+    margin-left: 10px;
+    flex-direction: column;
+    border: 1px solid black;
+    background: #A1BED6;
+    width: 20%;
+}
+#menu-tabs{
+    display: flex;
+    flex-direction: row;
+    background: white;
+}
+#menu-tabs:hover{
+  background: #dedede;
+  cursor: pointer;
+}
+#menu-tabs > div {
+    width: 50%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom:1px solid black;
+}
+
+#favorites-tab{
+      border-right: 1px solid black;
+}
+
+#list-button{
+  display: none;
+}
+
+#list-box{
+  background: #A1BED6;
+  padding-top: 8px;
+}
+
+#keyboard{
+    margin: auto;
+    text-align: center;
+    padding: 2%;
+    width: 70%;
+}
+
+#login-screen{
+  display: none;
+  color: white;
+}
+#login-button{
+  margin: 20px;
+}
+
+#create-account-screen{
+  display: none;
+  color: white;
+}
+#create-account-button{
+  margin: 20px;
+}
+#favorite-button {
+  display: none;
+}
+svg{
+    margin: auto;
+}
+.key{
+    stroke-width: 1;
+    stroke: black;
+}
+
+.black{
+    fill: black;
+}
+
+.black:hover{
+    fill: #610D70 !important;
+    cursor: pointer;
+}
+.white{
+    fill: white;
+}
+.white:hover {
+    fill: #A251B1 !important;
+    cursor: pointer;
+}
+.white.highlighted {
+    fill: #FFF2BA;
+    fill: #A1BED6;
+}
+.black.highlighted {
+    fill: #A1955F;
+    fill: #3A5369;
+}
+.black.playing {
+    fill: #610D70 !important;
+}
+.white.playing {
+    fill: #A251B1 !important;
+}
+
+.selected {
+  background: #A1BED6 !important;
+  border-bottom: 0px !important;
+}
+.selected:hover{
+  cursor:default;
+  background: #b8b8b8;
+}
+.favorited {
+  background: #e04646;
+}
+.link-text{
+  color: #7cc1cc;
+}
+.link-text:hover{
+  cursor: pointer;
+}
