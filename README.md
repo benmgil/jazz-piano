@@ -27,5 +27,9 @@ Best Practices **(5 points)**
 
 Creative Portion **(10 points)**
 
-
 *Checked out by Clay on 11/22/2020*
+
+For our creative portion, we implemented three additional features:
+1. A 'play' button beside the existing 'display' button that ascends through the user's selected scale, highlighting each note as it is played.
+1. Event listeners on the keyboard that play notes and simulate a true piano layout. 
+1. A dropdown to select the octave range of the keyboard, 
