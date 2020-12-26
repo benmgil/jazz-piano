@@ -10,7 +10,7 @@ app.use(express.static('public'));
 let con = mysql.createConnection({
   host: 'localhost',
   user: 'php-user',
-  password: '!No@Disk#Space$',
+  password: '!No@Disk#Space$256',
   database: 'keyboard'
 });
 
