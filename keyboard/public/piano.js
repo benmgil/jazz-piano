@@ -270,6 +270,7 @@ function createAccount(){
   let username = newName.value;
   let pass1 = newPass.value;
   let pass2 = verifiedPass.value;
+  console.log(pass1);
 
   //shows error if passwords don't match
   if( pass1 != pass2){
