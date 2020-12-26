@@ -39,7 +39,7 @@ app.post("/create_account", function(req,res){
       //if not, insert it
       if(rows.length == 0){
         con.query(
-          'INSERT INTO users (username, password_hash, favorites, recents) values (?, ?, ?, ?)',
+          'INSERT INTO users (username, password, favorites, recents) values (?, ?, ?, ?)',
           [username, password, '[]', '[]'],
           function(err, result) {
             if(err){
@@ -80,7 +80,7 @@ app.post("/login", function(req,res){
   }
   //if valid, check that user with that username&password exists and if so send success
   else{
-    con.query('SELECT * FROM users WHERE username = ? AND password_hash = ?', [username, password], function(err, rows){
+    con.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], function(err, rows){
       if(err) throw err;
       if(rows.length == 1){
         res.json({
@@ -104,7 +104,7 @@ app.post("/update_favorites", function(req,res){
   let password = req.body.password;
   let favorites = JSON.stringify(req.body.favorites);
   //update database with inputted data
-  con.query('UPDATE users SET favorites = ? WHERE username = ? AND password_hash = ?',
+  con.query('UPDATE users SET favorites = ? WHERE username = ? AND password = ?',
   [favorites, username, password], function(err){
     if (err) throw err;
   })
@@ -116,7 +116,7 @@ app.post("/update_recents", function(req,res){
   let password = req.body.password;
   let recents = JSON.stringify(req.body.recents);
   //update database with inputted data
-  con.query('UPDATE users SET recents = ? WHERE username = ? AND password_hash = ?',
+  con.query('UPDATE users SET recents = ? WHERE username = ? AND password = ?',
   [recents, username, password], function(err){
     if (err) throw err;
   })
