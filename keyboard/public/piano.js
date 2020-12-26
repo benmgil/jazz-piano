@@ -288,7 +288,7 @@ function createAccount(){
         if(data.success){
           creationErrorMessage.innerText = "";
           currentUser = username;
-          currentPass = password;
+          currentPass = pass1;
           favoriteScales = [];
           recentScales = [];
           let currScale = selectedKey + " " + selectedScale;
