@@ -179,3 +179,7 @@ svg{
 .link-text:hover{
   cursor: pointer;
 }
+#warning{
+    font-weight: bold;
+    color: #ff6d66;
+}
