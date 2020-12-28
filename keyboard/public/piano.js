@@ -220,7 +220,7 @@ function login(){
   let password = passwordLogin.value;
 
   //request login
-  fetch("login", {
+  fetch("http://benmgil.com:8000/login", {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify( { username: username, password: password } )
@@ -278,7 +278,7 @@ function createAccount(){
   }
   //else, requests to add it to database
   else{
-    fetch("create_account", {
+    fetch("http://benmgil.com:8000/create_account", {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify( { username: username, password: pass1 } )
@@ -548,7 +548,7 @@ function toggleFavorite(){
   }
 
   //update favorites in database
-  fetch("update_favorites", {
+  fetch("http://benmgil.com:8000/update_favorites", {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify( { username: currentUser, password: currentPass, favorites: favoriteScales } )
@@ -582,7 +582,7 @@ function updateRecents(){
   }
 
   //update recents in database
-  fetch("update_recents", {
+  fetch("http://benmgil.com:8000/update_recents", {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify( { username: currentUser, password: currentPass, recents: recentScales } )

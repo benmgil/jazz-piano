@@ -5,7 +5,7 @@ const app = express();
 const port = 8000;
 
 app.use(express.json());
-app.use(express.static('public'));
+//app.use(express.static('public'));
 
 let con = mysql.createConnection({
   host: 'localhost',
