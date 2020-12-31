@@ -4,6 +4,12 @@ const router = express.Router();
 const app = express();
 const port = 8000;
 
+app.use(
+    function(req,res,next){
+        console.log(req);
+        next();
+    }
+)
 app.use(express.json());
 //app.use(express.static('public'));
 
