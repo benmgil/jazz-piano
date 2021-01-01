@@ -72,7 +72,6 @@ app.post("/create_account", function(req,res){
 
 //responding to login request
 app.post("/login", function(req,res){
-    console.log("ohho");
   let username = req.body.username;
   let password = req.body.password;
 
