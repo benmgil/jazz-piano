@@ -1,7 +1,9 @@
 let mysql = require('mysql');
 const express = require('express');
 const router = express.Router();
+var cors = require('cors');
 const app = express();
+app.use(cors());
 const port = 8000;
 
 app.use(
