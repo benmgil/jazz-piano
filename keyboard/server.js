@@ -3,7 +3,9 @@ const express = require('express');
 const router = express.Router();
 var cors = require('cors');
 const app = express();
-app.use(cors());
+app.use(cors(
+    origin: 'http://benmgil.com'
+));
 const port = 8000;
 
 app.use(
