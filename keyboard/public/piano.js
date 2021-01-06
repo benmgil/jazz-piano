@@ -607,11 +607,14 @@ function playKey(noteName, oct){
   let keyElement = document.getElementById(id);
 
   //change class so that key is highlighted when played
+  let isDisplayed = keyElement.className.baseVal.indexOf("highlighted") != -1;
   let isBlackKey = id.indexOf("s") != -1;
   let classname = `key ${isBlackKey?"black":"white"} playing`;
+
   keyElement.className.baseVal = classname;
   setTimeout(function(){
-      let classname = `key ${isBlackKey ?"black":"white"}`
+      let classname = `key ${isBlackKey ?"black":"white"} ${isDisplayed?"highlighted":""}`
+
       keyElement.className.baseVal = classname;
   },1000*speed*.25)
 }
